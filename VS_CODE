@@ -1,0 +1,27 @@
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh
+
+./start-ubuntu.sh
+
+wget https://github.com/cdr/code-server/releases/download/v3.10.2/code-server-3.10.2-linux-arm64.tar.gz
+
+tar -xvf code-server-3.10.2-linux-arm64.tar.gz
+
+cd code-server-3.10.2-linux-arm64.tar.gz
+
+cd bin
+
+export PASSWORD="password"
+
+./code-server --bind-addr 127.0.0.1:8080
+
+./code-server
+
+for ngrok
+
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.tgz
+
+tar -xvf ngrok-stable-linux-arm64.tgz
+
+(Use you ngrok authtoken)
+
+./ngrok http 8080
